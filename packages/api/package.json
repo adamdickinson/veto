@@ -1,0 +1,59 @@
+{
+  "name": "@adamdickinson/veto-api",
+  "version": "1.0.0",
+  "description": "Multi-algorithm voting system API",
+  "main": "dist/server.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/adamdickinson/veto",
+  "author": "Adam Dickinson <me@adamdickinson.com.au>",
+  "license": "MIT",
+  "scripts": {
+    "build": "bili",
+    "start": "ts-node --transpile-only src/server.ts",
+    "watch": "nodemon",
+    "serve": "./scripts/start.sh",
+    "start:codegen": "SPECIAL_USER_NAME=codegen yarn watch",
+    "generate": "SPECIAL_USER_NAME=codegen graphql-codegen"
+  },
+  "dependencies": {
+    "@types/query-string": "^6.3.0",
+    "apollo-server": "^2.19.0",
+    "apollo-server-express": "^2.19.0",
+    "bili": "^4.9.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "node-fetch": "^2.6.1",
+    "query-string": "^6.13.7",
+    "store": "^2.0.12",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.19.1",
+    "@graphql-codegen/typescript": "^1.17.11",
+    "@types/lodash": "^4.14.164",
+    "@types/store": "^2.0.2",
+    "@types/uuid": "^8.3.0",
+    "apollo": "^2.31.0",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.1.2",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "ts-node": "^8.9.0",
+    "typescript": "^3.8.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "yarn start",
+    "ext": "ts"
+  }
+}

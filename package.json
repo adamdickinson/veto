@@ -1,0 +1,17 @@
+{
+  "name": "@adamdickinson/veto",
+  "version": "1.0.0",
+  "description": "Multi-algorithm voting system",
+  "main": "index.js",
+  "repository": "https://github.com/adamdickinson/veto",
+  "author": "Adam Dickinson <me@adamdickinson.com.au>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/api",
+    "packages/app"
+  ],
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
